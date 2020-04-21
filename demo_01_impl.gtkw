@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.105 (w)1999-2020 BSI
+[*] Tue Apr 21 14:39:31 2020
+[*]
+[dumpfile] "/home/matt/work/symbiotic/sva-demos/demo_01_impl/engine_0/trace.vcd"
+[dumpfile_mtime] "Tue Apr 21 14:39:02 2020"
+[dumpfile_size] 8952
+[savefile] "/home/matt/work/symbiotic/sva-demos/demo_01_impl.gtkw"
+[timestart] 0
+[size] 1503 776
+[pos] -1 -1
+*-6.338309 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] demo_01_impl.
+[sst_width] 257
+[signals_width] 255
+[sst_expanded] 1
+[sst_vpaned_height] 206
+@28
+demo_01_impl.clock
+@29
+demo_01_impl.reset
+@28
+demo_01_impl.a
+demo_01_impl.b
+[pattern_trace] 1
+[pattern_trace] 0
