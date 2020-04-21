@@ -1,0 +1,15 @@
+[options]
+mode bmc
+
+[engines]
+smtbmc
+
+[script]
+read -verific
+read -formal seq.sv
+read -formal demo_04_throughout.sv
+prep -top demo_04_throughout
+
+[files]
+seq.sv
+demo_04_throughout.sv
