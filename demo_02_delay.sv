@@ -2,7 +2,7 @@ module demo_02_delay (input clock);
 	wire reset;
 	wire a, b;
 
-    //     1234567890123456789012
+	//     0123456789012345678901
 	seq #("-_____-_______________") seq_r (clock, reset);
 	seq #("_-____-_______-_______") seq_a (clock, a);
 	seq #("___-__-__________-____") seq_b (clock, b);

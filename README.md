@@ -41,7 +41,7 @@ In the [demo](demo_01_impl.sv) we use this expression:
     // in the cycle after a, b must be high
 	assert property (a |=> b);
 
-It fails at step 18 because b is not high after a. 
+The assertion fails at step 18 because b is not high after a. 
 At steps 6 and 11 the assertion is disabled due to reset being high.
 
 ![impl](images/01-implication.png)
@@ -56,6 +56,9 @@ In the [demo](demo_02_delay.sv) we use this expression:
     // in any cycle when a is high, b must be high 1 to 2 cycles later
 	assert property (a |-> ##[1:2] b);
 
+The assertion fails at step 16 because b is not high between 1 and 2 cycles after a. 
+At step 6 the assertion is disabled due to reset being high.
+
 ![delay](images/02-delay.png)
 
 ## Demo 3: Consecutive
@@ -67,6 +70,9 @@ In the [demo](demo_03_consecutive.sv) we use this expression:
 
     // after a goes high, b must be high for 2 cycles followed 1 cycle later by c
 	assert property ($rose(a) |=> b[*2] ##1 c);
+
+The assertion fails at step 15 because b is not high after a goes high.
+At step 8 the assertion is disabled due to reset being high.
 
 ![consecutive](images/03-consecutive.png)
 
@@ -80,5 +86,8 @@ In the [demo](demo_04_throughout.sv) we use this expression:
 
     // after a goes high, b must be high throughout 3 (not necessarily consecutive) cycles of c
 	assert property ($rose(a) |=> (b throughout c[->3]));
+
+The assertion fails at step 16 because b does not remain high while we wait for 3 cycles of c.
+At step 9 the assertion is disabled due to reset being high.
 
 ![throughout](images/04-throughout.png)
