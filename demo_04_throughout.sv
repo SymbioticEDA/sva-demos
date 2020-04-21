@@ -2,14 +2,16 @@ module demo_04_throughout (input clock);
 	wire reset;
 	wire a, b;
 
-	seq #("-_______-___________") seq_r (clock, reset);
-	seq #("_-____-____-________") seq_a (clock, a);
-	seq #("__--___-____________") seq_b (clock, b);
-	seq #("__---_______--______") seq_c (clock, c);
+    //     12345678901234567890
+	seq #("-________-__________") seq_r (clock, reset);
+	seq #("_--____-____--______") seq_a (clock, a);
+	seq #("__----__-____---_-__") seq_b (clock, b);
+	seq #("__--_-______-_-_-___") seq_c (clock, c);
 
 	default clocking @(posedge clock); endclocking
 	default disable iff (reset);
 
-	assert property ($rose(a) |=> (b throughout c[*2]));
+    // after a goes high, b must be high throughout 3 (not necessarily consecutive) cycles of c
+	assert property ($rose(a) |=> (b throughout c[->3]));
 endmodule
 
