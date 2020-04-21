@@ -36,19 +36,49 @@ And to view the trace:
 If the antecedent is followed by |-> then the consequent must happen in the same cycle.
 If the antecedent is followed by |=> then the consequent must happen in the next cycle.
 
-In the demo we use this expression:
+In the [demo](demo_01_impl.sv) we use this expression:
 
     // in the cycle after a, b must be high
 	assert property (a |=> b);
 
-And it fails at step 18 because b is not high after a. At steps 6 and 11 we don't care
-because reset is high.
+It fails at step 18 because b is not high after a. 
+At steps 6 and 11 the assertion is disabled due to reset being high.
 
-![impl](images/implication.png)
+![impl](images/01-implication.png)
 
 ## Demo 2: Delay
 
+A delay can be given like ##1 or ##2 to delay 1 or 2 cycles respectively.
+A delay range can be given like ##[1:2] to mean between 1 and 2 cycles.
+
+In the [demo](demo_02_delay.sv) we use this expression:
+
+    // in any cycle when a is high, b must be high 1 to 2 cycles later
+	assert property (a |-> ##[1:2] b);
+
+![delay](images/02-delay.png)
 
 ## Demo 3: Consecutive
 
-## Demo 4: Throughout
+Here we show how to specify that a signal should remain high for a consecutive number of cycles.
+The sequence of 2 cycles of b is defined by b[*2].
+
+In the [demo](demo_03_consecutive.sv) we use this expression:
+
+    // after a goes high, b must be high for 2 cycles followed 1 cycle later by c
+	assert property ($rose(a) |=> b[*2] ##1 c);
+
+![consecutive](images/03-consecutive.png)
+
+## Demo 4: Throughout and Go To repetition.
+
+Throughout allows us to specify that a sequence should happen throughout another sequence.
+We also introduce Go To repetition [->X]. For example c[->3] means we need 3 non necessarily 
+consecutive cycles of c.
+
+In the [demo](demo_04_throughout.sv) we use this expression:
+
+    // after a goes high, b must be high throughout 3 (not necessarily consecutive) cycles of c
+	assert property ($rose(a) |=> (b throughout c[->3]));
+
+![throughout](images/04-throughout.png)
