@@ -23,7 +23,10 @@ To run the demos, type this:
 
     sby -f demo_01_impl.sv
 
-And to view the trace:
+You will see the step that the assertion fails for each example is 1 higher than in the explanations below
+because on a clocked assertion, the failure is reported on the subsequent cycle.
+
+To view the trace:
 
     gtkwave demo_01_impl/engine_0/trace.vcd demo_01_impl.gtkw
 
