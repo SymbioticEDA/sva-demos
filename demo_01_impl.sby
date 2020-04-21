@@ -1,0 +1,15 @@
+[options]
+mode bmc
+
+[engines]
+smtbmc
+
+[script]
+read -verific
+read -formal seq.sv
+read -formal demo_01_impl.sv
+prep -top demo_01_impl
+
+[files]
+seq.sv
+demo_01_impl.sv
