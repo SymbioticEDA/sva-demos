@@ -1,0 +1,53 @@
+initial
+assume (= [$auto$async2sync.cc:104:execute$487] false)
+assume (= [$auto$async2sync.cc:104:execute$491] false)
+assume (= [$auto$async2sync.cc:104:execute$495] false)
+assume (= [$auto$async2sync.cc:104:execute$499] false)
+assume (= [$auto$async2sync.cc:104:execute$503] false)
+assume (= [$verific$i5$demo_03_consecutive.sv:13$18] false)
+assume (= [seq_a.cycle] #b00000000000000000000000000000000)
+assume (= [seq_b.cycle] #b00000000000000000000000000000000)
+assume (= [seq_c.cycle] #b00000000000000000000000000000000)
+assume (= [seq_r.cycle] #b00000000000000000000000000000000)
+
+state 0
+assume (= [clock] false)
+
+state 1
+assume (= [clock] false)
+
+state 2
+assume (= [clock] false)
+
+state 3
+assume (= [clock] false)
+
+state 4
+assume (= [clock] false)
+
+state 5
+assume (= [clock] false)
+
+state 6
+assume (= [clock] false)
+
+state 7
+assume (= [clock] false)
+
+state 8
+assume (= [clock] false)
+
+state 9
+assume (= [clock] false)
+
+state 10
+assume (= [clock] false)
+
+state 11
+assume (= [clock] false)
+
+state 12
+assume (= [clock] false)
+
+state 13
+assume (= [clock] false)

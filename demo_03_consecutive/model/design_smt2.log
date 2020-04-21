@@ -1,0 +1,168 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite -- Symbiotic EDA Edition [20200402A ] |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020 Symbiotic GmbH                                  |
+ |                                                                            |
+ |  Licensed to: Symbiotic EDA                                                |
+ |  Licensee contact: Symbiotic Support <support@symbioticeda.com>            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+1706 (git sha1 c903246, clang 3.8.0-2ubuntu4 -fPIC -Os)
+
+[license] Signature verified.
+[license] License will expire in 41 days.
+[license] License is valid for MAC address f8:75:a4:36:11:9d.
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing ILANG frontend.
+Input filename: design.il
+
+2. Printing statistics.
+
+=== seq(seq="____-__________-____") ===
+
+   Number of wires:                 51
+   Number of wire bits:            151
+   Number of public wires:           5
+   Number of public wire bits:      74
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 50
+     $add                            1
+     $anyseq                         4
+     $dff                            1
+     $eq                            28
+     $mux                            2
+     $not                            1
+     $pmux                           4
+     $reduce_or                      7
+     $shr                            1
+     $sub                            1
+
+=== seq(seq="__--___-_____--_____") ===
+
+   Number of wires:                 51
+   Number of wire bits:            151
+   Number of public wires:           5
+   Number of public wire bits:      74
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 50
+     $add                            1
+     $anyseq                         4
+     $dff                            1
+     $eq                            28
+     $mux                            2
+     $not                            1
+     $pmux                           4
+     $reduce_or                      7
+     $shr                            1
+     $sub                            1
+
+=== seq(seq="_-____-____-________") ===
+
+   Number of wires:                 51
+   Number of wire bits:            151
+   Number of public wires:           5
+   Number of public wire bits:      74
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 50
+     $add                            1
+     $anyseq                         4
+     $dff                            1
+     $eq                            28
+     $mux                            2
+     $not                            1
+     $pmux                           4
+     $reduce_or                      7
+     $shr                            1
+     $sub                            1
+
+=== seq(seq="-_______-___________") ===
+
+   Number of wires:                 51
+   Number of wire bits:            151
+   Number of public wires:           5
+   Number of public wire bits:      74
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 50
+     $add                            1
+     $anyseq                         4
+     $dff                            1
+     $eq                            28
+     $mux                            2
+     $not                            1
+     $pmux                           4
+     $reduce_or                      7
+     $shr                            1
+     $sub                            1
+
+=== demo_03_consecutive ===
+
+   Number of wires:                 33
+   Number of wire bits:             41
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 29
+     $assert                         1
+     $dff                            6
+     $eq                             6
+     $mux                           10
+     $not                            1
+     $reduce_or                      1
+     seq(seq="-_______-___________")      1
+     seq(seq="_-____-____-________")      1
+     seq(seq="__--___-_____--_____")      1
+     seq(seq="____-__________-____")      1
+
+=== design hierarchy ===
+
+   demo_03_consecutive               1
+     seq(seq="-_______-___________")      1
+     seq(seq="_-____-____-________")      1
+     seq(seq="__--___-_____--_____")      1
+     seq(seq="____-__________-____")      1
+
+   Number of wires:                237
+   Number of wire bits:            645
+   Number of public wires:          25
+   Number of public wire bits:     301
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                225
+     $add                            4
+     $anyseq                        16
+     $assert                         1
+     $dff                           10
+     $eq                           118
+     $mux                           18
+     $not                            5
+     $pmux                          16
+     $reduce_or                     29
+     $shr                            4
+     $sub                            4
+
+3. Executing SMT2 backend.
+Creating SMT-LIBv2 representation of module seq(seq="-_______-___________").
+Creating SMT-LIBv2 representation of module seq(seq="_-____-____-________").
+Creating SMT-LIBv2 representation of module seq(seq="__--___-_____--_____").
+Creating SMT-LIBv2 representation of module seq(seq="____-__________-____").
+Creating SMT-LIBv2 representation of module demo_03_consecutive.
+
+End of script. Logfile hash: 1a25a37b83, CPU: user 0.02s system 0.00s, MEM: 15.35 MB peak
+Yosys 0.9+1706 (git sha1 c903246, clang 3.8.0-2ubuntu4 -fPIC -Os)
+Time spent: 60% 2x write_smt2 (0 sec), 37% 2x read_ilang (0 sec), ...

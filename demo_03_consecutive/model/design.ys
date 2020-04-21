@@ -1,0 +1,16 @@
+# running in demo_03_consecutive/src/
+read -verific
+read -formal seq.sv
+read -formal demo_03_consecutive.sv
+prep -top demo_03_consecutive
+
+memory_nordff
+async2sync
+chformal -assume -early
+chformal -live -fair -cover -remove
+opt_clean
+setundef -anyseq
+opt -keepdc -fast
+check
+hierarchy -simcheck
+write_ilang ../model/design.il
