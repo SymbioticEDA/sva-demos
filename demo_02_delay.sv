@@ -10,6 +10,6 @@ module demo_02_delay (input clock);
 	default clocking @(posedge clock); endclocking
 	default disable iff (reset);
 
-    // in any cycle when a is high, b must be high 1 to 2 cycles later
+	// in any cycle when a is high, b must be high 1 to 2 cycles later
 	assert property (a |-> ##[1:2] b);
 endmodule
