@@ -19,14 +19,14 @@ In addition, the assertions are disabled if reset is ever high.
 
 	default disable iff (reset);
 
-To run the demos, type this:
+To run demo 1, type this:
 
     sby -f demo_01_impl.sv
 
 You will see the step that the assertion fails for each example is 1 higher than in the explanations below
 because on a clocked assertion, the failure is reported on the subsequent cycle.
 
-To view the trace:
+To view the counter example trace for demo 1:
 
     gtkwave demo_01_impl/engine_0/trace.vcd demo_01_impl.gtkw
 
