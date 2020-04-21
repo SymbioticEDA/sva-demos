@@ -3,9 +3,9 @@ module demo_03_consecutive (input clock);
 	wire a, b;
 
 	seq #("-_______-___________") seq_r (clock, reset);
-	seq #("_-____-____-________") seq_a (clock, a);
-	seq #("__--___-_____--_____") seq_b (clock, b);
-	seq #("____-__________-____") seq_c (clock, c);
+	seq #("_--___-_______-_____") seq_a (clock, a);
+	seq #("__--___-________--__") seq_b (clock, b);
+	seq #("____-_____________-_") seq_c (clock, c);
 
 	default clocking @(posedge clock); endclocking
 	default disable iff (reset);
