@@ -94,3 +94,9 @@ The assertion fails at step 16 because b does not remain high while we wait for 
 At step 9 the assertion is disabled due to reset being high.
 
 ![throughout](images/04-throughout.png)
+
+# Other Resources
+
+* Tudor Timi's Symbiotic EDA webinar presentation on SVA: https://github.com/verification-gentleman-blog/getting-started-with-sva
+* Peter Monsson's SVA cheat sheet: http://peter.monsson.dk/2015/11/16/a-systemverilog-assertions-checklist-and-cheat-sheet/
+* Some examples inspired by https://www.design-reuse.com/articles/44987/system-verilog-assertions-simplified.html
