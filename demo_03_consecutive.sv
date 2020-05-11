@@ -1,6 +1,7 @@
-module demo_03_consecutive (input clock);
+`default_nettype none
+module demo_03_consecutive (input wire clock);
 	wire reset;
-	wire a, b;
+	wire a, b, c;
 
 	//     01234567890123456789
 	seq #("-_______-___________") seq_r (clock, reset);

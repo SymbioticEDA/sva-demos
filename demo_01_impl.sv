@@ -1,4 +1,5 @@
-module demo_01_impl (input clock);
+`default_nettype none
+module demo_01_impl (input wire clock);
 	wire reset;
 	wire a, b;
 

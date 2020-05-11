@@ -1,6 +1,7 @@
-module demo_04_throughout (input clock);
+`default_nettype none
+module demo_04_throughout (input wire clock);
 	wire reset;
-	wire a, b;
+	wire a, b, c;
 
 	//     01234567890123456789
 	seq #("-________-__________") seq_r (clock, reset);
