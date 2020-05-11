@@ -29,6 +29,9 @@ because on a clocked assertion, the failure is reported on the subsequent cycle.
 To view the counter example trace for demo 1:
 
     gtkwave demo_01_impl/engine_0/trace.vcd demo_01_impl.gtkw
+    
+After checking a demo, look at the .sv file - you can easily change the sequence of signals and check the 
+assertions work as you expect.
 
 ## Demo 1: Implication
 
