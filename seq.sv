@@ -1,7 +1,8 @@
+`default_nettype none
 module seq #(
 	parameter [1023:0] seq = ""
 ) (
-	input clock,
+	input wire clock,
 	output reg [3:0] dout
 );
 	localparam seqlen = $clog2(seq) / 8;
