@@ -8,6 +8,8 @@ in your designs.
 
 The subset of SVA supported in sby is defined [here](https://symbiyosys.readthedocs.io/en/latest/verific.html)
 
+We have also made a video that covers this topic - which you can watch here https://www.youtube.com/watch?v=1lCLWRDm92w
+
 ## Demos
 
 In all these demos, we are making use of default clocking, so the properties by default
